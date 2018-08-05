@@ -1,4 +1,4 @@
-var express = require('express');
+const express = require('express');
 const api = express.Router();
 
 api.get('/api/test/get', function (req, res) {
