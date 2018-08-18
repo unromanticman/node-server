@@ -5,12 +5,12 @@ const port = process.env.PORT || 3005;
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.get('/', function (req, res) {
+app.get('/', (req, res) => {
   res.send('<h1>It works.</h1><p>This is a default web page for server.</p>');
 });
 
 app.use('/', require('./routes/routes'));
 
-app.listen(port, function () {
-  console.log('listening on port http://localhost:'+port);
+app.listen(port, () => {
+  console.log('listening on port http://localhost:' + port);
 });
